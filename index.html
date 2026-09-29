@@ -1,26 +1,227 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Website</title>
     <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <header id="navbar">
-      <h1>Kartika</h1>
-      <nav class="list-navbar">
+      <h1 class="logo">K!</h1>
+      <nav class="list-navbar" id="navItems">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="skill.html">Skill</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact Me</a>
+        <a href="#about">About</a>
+        <a href="#skill">Skill</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact Me</a>
       </nav>
+      <a href="javascript:void(0);" class="icon" onclick="toggleMenuButton()">
+        <i class="fa fa-bars"></i>
+      </a>
     </header>
     <section id="home">
-      <h1>Hi! I Am Kartika</h1>
-      <p>A Fullstack Web Developer</p>
-      <a href="CV_Kartika Sari.pdf" download>Get My CV</a>
+      <h1 class="slide-left">Hi! I Am Kartika</h1>
+      <p class="slide-right">A Fullstack Web Developer</p>
+      <hr />
+      <a href="#about">More of Me!</a>
     </section>
+    <section id="about">
+      <h1>About Me</h1>
+      <div id="about-content">
+        <div class="content-left">
+          <p>
+            I'm a front-end web developer with an experience in developing
+            website. <br />
+            I have expertise in front-end programming with HTML, CSS,
+            Javascript. Also, I able to use Figma for designing the website.
+            <br />
+            I'm happy to be able to build solution that eficient based on my
+            technical understanding and creativity.
+          </p>
+          <hr />
+          <h3>Education</h3>
+          <div class="edu-content">
+            <div>
+              <p>Universitas Pembangunan Nasional "Veteran" Jawa Timur</p>
+              <p>2021 - Present</p>
+            </div>
+            <p>Computer Science Major, Department of Computer Science</p>
+          </div>
+        </div>
+        <img src="assets/profile_pict.jpg" width="30%" alt="My Profile Photo" />
+      </div>
+    </section>
+    <section id="skill">
+      <h1>Skills</h1>
+      <div id="skill-content">
+        <ul class="skill-list">
+          <div>
+            <li>Figma</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+          </div>
+          <div>
+            <li>MySQL</li>
+            <li>Jquery</li>
+            <li>Bootstrap</li>
+            <li>Github</li>
+          </div>
+        </ul>
+      </div>
+      <div id="experience-content">
+        <h2>Experience</h2>
+        <div id="exp-detail">
+          <div id="exp-header">
+            <h5>Course Coding Studio Fundamental Front End Web</h5>
+            <button id="btn-expand" onclick="toogleDetail(event)">
+              More Info
+            </button>
+          </div>
+          <div id="exp-content">
+            <div class="exp-first-left">
+              <div>
+                <p>Nov 2022 - Feb 2023</p>
+                <ul>
+                  <li>Building website using HTML and CSS</li>
+                  <li>
+                    Building web profile using HTML, CSS, Javascript, Jquery,
+                    Bootstrap and upload it on Github.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="exp-first-right">
+              <img src="assets/Website.svg" width="30%" alt="Website" />
+              <img src="assets/Web Profile.svg" width="30%" alt="Web Profile" />
+            </div>
+          </div>
+        </div>
+        <div id="exp-detail">
+          <div id="exp-header">
+            <h5>Course Acodemia JS React JS</h5>
+            <button id="btn-expand" onclick="toogleDetail(event)">
+              More Info
+            </button>
+          </div>
+          <div id="exp-content">
+            <div class="exp-second-left">
+              <ul>
+                <li>Building To Do List Using React JS</li>
+              </ul>
+            </div>
+            <div class="exp-second-right">
+              <img src="assets/To-Do List.svg" width="30%" alt="To Do List" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="blog">
+      <h1>Blogs</h1>
+      <div id="first-blog">
+        <div class="content">
+          <h3>What is Digital Product?</h3>
+          <p>Understand about things inside digital product</p>
+        </div>
+        <div class="arrow">
+          <a href="blogContent(digiPro).html">
+            <img src="assets/arrow.svg" alt="arrow" />
+          </a>
+        </div>
+      </div>
+      <div id="second-blog">
+        <div class="content">
+          <h3>Work On GitHub!</h3>
+          <p>Connecting your project and collaborating with GitHub</p>
+        </div>
+        <div class="arrow">
+          <a href="blogContent(github).html">
+            <img src="assets/arrow.svg" alt="arrow" />
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h1>Let's Team Up</h1>
+      <div>
+        <div id="contact-content">
+          <p class="contact-text">
+            Any collaboration is fire! <br />
+            If there is a need, you can contact me anytime through my social
+            media down below or fill the form beside this. <br />
+            Can't wait to work with you!
+          </p>
+          <br />
+          <div class="contact-socmed">
+            <a
+              href="https://www.instagram.com/karka18/"
+              target="_blank"
+              id="detail2-sosmed"
+            >
+              <img
+                src="assets/instagram-logo.png"
+                width="48px"
+                height="48px"
+                alt="instagram-logo"
+              />
+              <div>Instagram</div>
+            </a>
+            <a
+              href="https://github.com/kartika18"
+              target="_blank"
+              id="detail2-sosmed"
+            >
+              <img
+                src="assets/github.png"
+                width="48px"
+                height="48px"
+                alt="github-logo"
+              />
+              <div>GitHub</div>
+            </a>
+          </div>
+        </div>
+        <div id="contact-form">
+          <form>
+            <h1>Get in Touch</h1>
+            <div class="input-group">
+              <label for="input-email">Email</label>
+              <input
+                type="email"
+                id="input-email"
+                placeholder="example: @mail.com"
+              />
+            </div>
+            <div class="input-group">
+              <label for="input-subject">Subject</label>
+              <input
+                type="text"
+                id="input-subject"
+                placeholder="Your Subject"
+              />
+            </div>
+            <div class="input-group">
+              <label for="input-message">Message</label>
+              <input
+                type="text"
+                id="input-message"
+                placeholder="Your Message"
+              />
+            </div>
+            <div class="button-contact-form">
+              <button type="submit" class="btn-form">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
   </body>
 </html>
